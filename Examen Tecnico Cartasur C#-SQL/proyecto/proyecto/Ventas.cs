@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
@@ -16,8 +16,7 @@ namespace proyecto
     {
         public void Obtener_Lista()
         {
-            ConexionSQL coneccion = new ConexionSQL();
-           // string retorno = "error";
+            ConexionSQL conexion1 = new ConexionSQL();
 
             try
             {
@@ -25,19 +24,18 @@ namespace proyecto
                                             "FROM ventas " +
                                             "GROUP BY Fecha_venta " +
                                             "ORDER BY Cantidad_Ventas DESC;";
-                coneccion.comando = new SqlCommand();
-                coneccion.comando.CommandType = CommandType.Text;
-                coneccion.comando.CommandText = cadena;
-                coneccion.comando.Connection = coneccion.conexion;
-                coneccion.conexion.Open();
-                coneccion.lector = coneccion.comando.ExecuteReader();
+                conexion1.comando = new SqlCommand();
+                conexion1.comando.CommandType = CommandType.Text;
+                conexion1.comando.CommandText = cadena;
+                conexion1.comando.Connection = conexion1.conexion;
+                conexion1.conexion.Open();
+                conexion1.lector = conexion1.comando.ExecuteReader();
 
-                while (coneccion.lector.Read())
+                while (conexion1.lector.Read())
                 {
-                    //  retorno = coneccion.lector["Fecha_venta"].ToString() + coneccion.lector["Cantidad_Ventas"].ToString();
-                    Console.WriteLine("Fecha con mayor cantidad de ventas: " + coneccion.lector.GetDateTime(0) + "\nCantidad de ventas maximas de ese dia: " + coneccion.lector.GetInt32(1));
+                    Console.WriteLine("Fecha con mayor cantidad de ventas: " + conexion1.lector.GetDateTime(0) + "\nCantidad de ventas maximas de ese dia: " + conexion1.lector.GetInt32(1));
                 }
-                coneccion.lector.Close();
+                conexion1.lector.Close();
             }
             catch (Exception ex)
             {
@@ -45,13 +43,13 @@ namespace proyecto
             }
             finally
             {
-                if (coneccion.conexion.State == ConnectionState.Open)
+                if (conexion1.conexion.State == ConnectionState.Open)
                 {
-                    coneccion.conexion.Close();
+                    conexion1.conexion.Close();
                 }
             }
 
-            //return retorno;
+           
 
         }
     }
