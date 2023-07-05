@@ -64,7 +64,12 @@ function estadoApi() {
         if (data.includes('UP')) { // se verifica si el texto es "up"
             document.getElementById('status').textContent = 'La api conecto correctamente y su estado es "UP"';
             }
-            else {document.getElementById('status').textContent = 'Hubo un error la api no conecto correctamente'; }
+            //else {document.getElementById('status').textContent = 'Hubo un error la api no conecto correctamente'; }
+            //no funciona, nunca se muestra en pantalla 
+    })
+    .catch(error => {
+        console.error('Error:',error);
+        document.getElementById('status').textContent = "Hubo un error la api no conecto correctamente";
     })
 }
 //llamar a la función para obtener el estado de la API al cargar la página
