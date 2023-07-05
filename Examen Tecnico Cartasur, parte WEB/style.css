@@ -1,0 +1,127 @@
+/* estilo preterminado*/
+*{ 
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+    font-family: "Prompt", sans-serif;
+    font-size: 18px;
+}
+/* cuerpo de la pagina*/
+body {
+    background: linear-gradient(to bottom,rgb(3, 3, 248),rgb(252, 6, 6),rgb(252, 252, 252));
+    height: 100%;
+    margin: 20px;
+}
+/* estilo de los textos*/
+h1,h2,h3,h4,h5 {
+    text-align: center;
+    color: white;
+}
+/* formulario estilos */
+.formulario-empleado {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 30px;
+}
+
+
+ul {
+    list-style: none;
+    padding: 15px;
+    color: white;
+    border: 1px solid #ccc;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+.formulario-empleado h2,
+.lista-empleados h2 {
+    margin-top: 0px;
+}
+
+/* botones estilo*/
+select{
+    position: relative;
+    top: -17px;
+    width: 70.7% !important;
+}
+
+input[type="text"],
+select {
+    width: 70%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+}
+
+#btn-agregar{
+    font-size: 50px;
+    padding: 5px 5px; 
+    background-color: green;  
+    color: lightgreen; 
+    border: none; 
+    border-radius: 40px; 
+    cursor: pointer; 
+    position: relative;
+    top: -50px;
+    left: 70px;
+}
+
+#btn-agregar:hover{
+    transition: 0.7s;
+    background-color: darkgreen;
+    color: rgb(175, 247, 175);
+}
+
+#botonEliminar:hover{
+    transition: 0.7s;
+    background-color: red;
+}
+
+button {
+    background-color: #0a0a0a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+
+
+button:hover {
+    background-color: #6f706f;
+    transition: 0.7s;
+    border-radius: 15px;
+
+}
+
+/* parte final de la pagina estilos*/
+footer{
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+
+    bottom: 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgb(65, 113, 243);
+    cursor: pointer;
+}
+footer a:hover{
+    color:#3600f8;
+    transition: 0.7s;
+}
+

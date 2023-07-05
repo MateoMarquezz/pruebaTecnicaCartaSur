@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--titulo en pestaña chrome con favicon-->
+
+    <title>Lista de empleados</title>
+    <link rel="shortcut icon" href="./img/favicon-cartasur.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+
+<body>
+<!-- cabezera con titulo y estado de la api a consumir-->
+    <div class="encabezado">
+        <h1><span id="status"></span></h1> 
+        <h2>Listado de Empleados</h2>
+
+</div>
+<!--div formulario -->
+    <div class="formulario-empleado">
+        <h3>Agregar Nuevo Empleado</h3>
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellido" placeholder="Apellido">
+        <select id="estado">
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+        </select>
+        <button  class="fas fa-plus-circle" id="btn-agregar"></button>
+    </div>
+<!--div lista de empleado activos e inactivos-->
+    <div class="lista-empleados">
+        <h4>Empleados Activos</h4>
+        <ul id="lista-empleados-activos"></ul>
+
+        <h5>Empleados Inactivos</h5>
+        <ul id="lista-empleados-inactivos"></ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+<footer>
+    <hr>
+    <!--footer con descripcion del programa-->
+    <p> Prueba Tecnica <a href="https://www.cartasur.com.ar/" target="_blank">CartaSur</a> Pasantia Marquez Mateo </p>
+
+</footer>
+</html>
