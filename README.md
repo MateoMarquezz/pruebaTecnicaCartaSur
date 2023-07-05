@@ -5,7 +5,8 @@ La conexión de c# y la base de datos, para poder mostrar los resultados del sto
 
 
 
---Imagenes ejemplo de las cosas que deben verse-- 
+--Imagenes ejemplo de las cosas que deben verse-- \n
+
 [Pagina lista de empleados]
 
 ![image](https://github.com/MateoMarquezz/pruebaTecnicaCartaSur/assets/99215992/bdd48231-d41b-4db8-aae4-3b9c0e9f66b6)
